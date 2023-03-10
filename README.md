@@ -14,6 +14,7 @@ pyrate will rate the rate as a function of temperature to an output file specifi
 ### Configuration
 
 Configuration files must contain the fields:
+
     - `Z_projectile`: projectile proton number
     - `A_projectile`: projectile mass number
     - `Z_target`: target proton number
