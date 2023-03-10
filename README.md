@@ -15,18 +15,18 @@ pyrate will rate the rate as a function of temperature to an output file specifi
 
 Configuration files must contain the fields:
 
-    - `Z_projectile`: projectile proton number
-    - `A_projectile`: projectile mass number
-    - `Z_target`: target proton number
-    - `A_target`: target mass number
-    - `Sfactor_file`: path to AZURE data file
-    - `output_file`: path to which rate will be written
-    - `T_min`: starting temperature of the calculation (in GK)
-    - `T_max`: final temperature of the calculation (in GK)
-    - `T_step`: temperature step size (in GK)
+- `Z_projectile`: projectile proton number
+- `A_projectile`: projectile mass number
+- `Z_target`: target proton number
+- `A_target`: target mass number
+- `Sfactor_file`: path to AZURE data file
+- `output_file`: path to which rate will be written
+- `T_min`: starting temperature of the calculation (in GK)
+- `T_max`: final temperature of the calculation (in GK)
+- `T_step`: temperature step size (in GK)
 
 ## Requirements
 
-python 3.10
-numpy
-scipy
+- python 3.10
+- numpy
+- scipy
