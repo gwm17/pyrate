@@ -8,6 +8,8 @@ def read_azure_file(filepath: Path) -> tuple[np.ndarray, np.ndarray]:
         sfactor = np.zeros(len(lines))
         for idx, line in enumerate(lines):
             entries = line.split()
+            if len(entries) < 5:
+                continue
             energies[idx] = float(entries[0])
             sfactor[idx] = float(entries[4])
 

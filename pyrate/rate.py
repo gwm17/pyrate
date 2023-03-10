@@ -37,7 +37,7 @@ def integrate_rate_func(T: float, projectile: NucleusData, target: NucleusData, 
     return simpson(integrand, energies)
 
 def calc_rate(config: Config):
-    npoints = (config.T_max - config.T_min) / config.T_step
+    npoints = int( (config.T_max - config.T_min) / config.T_step )
     temperatures = np.linspace(config.T_min, config.T_max, npoints)
     rates = np.zeros(len(temperatures))
     energies, sfactor = read_azure_file(config.sfactor_filepath)

@@ -28,8 +28,8 @@ def read_config_file(file: str) -> Optional[Config]:
         data = json.load(input)
         zp = data["Z_projectile"]
         ap = data["A_projectile"]
-        zt = data["Z_ejectile"]
-        at = data["A_ejectile"]
+        zt = data["Z_target"]
+        at = data["A_target"]
         config.projectile = nuclear_data.get_data(zp, ap)
         config.target = nuclear_data.get_data(zt, at)
         config.sfactor_filepath = Path(data["Sfactor_file"])
