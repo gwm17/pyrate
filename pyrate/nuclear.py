@@ -5,7 +5,8 @@ PATH_TO_MASSFILE = "./etc/amdc2016_mass.txt"
 
 @dataclass
 class NucleusData:
-    mass: float = 0.0
+    mass: float = 0.0 #MeV
+    mass_u: float = 0.0 #u
     elementSymbol: str = ""
     isotopicSymbol: str = ""
     prettyIsotopicSymbol: str = ""
@@ -36,7 +37,8 @@ class NuclearDataMap:
                 data = NucleusData()
                 data.Z = int(entries[1])
                 data.A = int(entries[2])
-                data.mass = (float(entries[4])  + 1.0e-6 * float(entries[5]) - float(data.Z) * self.ELECTRON_MASS) * self.U2MEV
+                data.mass_u = (float(entries[4])  + 1.0e-6 * float(entries[5]) - float(data.Z) * self.ELECTRON_MASS)
+                data.mass = data.mass_u * self.U2MEV
                 data.elementSymbol = entries[3]
                 data.isotopicSymbol = f"{data.A}{entries[3]}"
                 data.prettyIsotopicSymbol = f"<sup>{data.A}</sup>{entries[3]}"

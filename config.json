@@ -3,9 +3,9 @@
     "A_projectile": 7,
     "Z_target": 1,
     "A_target": 2,
-    "Sfactor_file": "some/path/shit",
-    "output_file": "some/path/shit",
-    "T_min": 0.01,
-    "T_max": 3.0,
-    "T_step": 0.01
+    "Sfactor_file": "azure_data/be7da_fixedNabin_trunc.txt",
+    "output_file": "out/be7da_fixedNabin_trunc_3_27GK_0001GKstep.csv",
+    "T_min": 3,
+    "T_max": 27,
+    "T_step": 0.001
 }

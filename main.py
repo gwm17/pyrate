@@ -15,7 +15,8 @@ def main(configfile: str):
         print(f"Could not read configuration in file {configfile}!")
         return
     
-    pyrate.calc_rate(config)
+    pyrate.calc_rate_sfactor(config)
+    #pyrate.calc_rate_cross(config)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
